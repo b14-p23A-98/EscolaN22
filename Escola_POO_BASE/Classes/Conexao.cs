@@ -46,6 +46,7 @@ namespace Escola_POO_BASE.Classes
             conexao.Open();
         }
 
+
         //E um outro método para fechar a conexão com o banco
         public void FecharConexao()
         {

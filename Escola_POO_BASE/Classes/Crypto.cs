@@ -18,6 +18,7 @@ namespace Escola_POO_BASE.Classes
             return ByteArrayToString(hashedDatabytes).ToLower();
         }
 
+
         public static string ByteArrayToString(byte[] inputArray)
         {
             StringBuilder sb = new StringBuilder("");
