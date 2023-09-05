@@ -61,7 +61,8 @@ namespace Escola_POO_BASE.Telas
             //TODO 2- Descobrir como mostrar a data e hora completa no ToolStrip.            
 
             TslDataHora.Text = DateTime.Now.ToLongDateString() + " | " + DateTime.Now.ToLongTimeString();
-
+            TmrRelogio.Interval = 1000;
+            TmrRelogio.Enabled = true;
         }
 
         private void TsiAlterarSenha_Click(object sender, EventArgs e)
@@ -74,6 +75,11 @@ namespace Escola_POO_BASE.Telas
         {
             TelaCadastraAluno tlCadAluno = new TelaCadastraAluno(_userLogado);
             tlCadAluno.ShowDialog();
+        }
+
+        private void TmrRelogio_Tick(object sender, EventArgs e)
+        {
+            TslDataHora.Text = DateTime.Now.ToLongDateString() + " | " + DateTime.Now.ToLongTimeString();
         }
     }
 }
